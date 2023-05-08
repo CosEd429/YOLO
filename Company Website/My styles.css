@@ -65,6 +65,7 @@ body {
   justify-content: space-around;
   flex-flow: column wrap;
 }
+
 .CharactersTXT{
   font-size: 14px;
   font-weight: bold;
@@ -80,3 +81,4 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+
