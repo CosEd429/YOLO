@@ -67,18 +67,10 @@ body {
 }
 
 .CharactersTXT{
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
-  color:blueviolet;
+  color: lime;
   text-align:center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  background-color: white;
 }
 
