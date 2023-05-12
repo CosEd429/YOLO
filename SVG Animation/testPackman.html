@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"
+    ></script>
+
+    <title>Document</title>
+    <style>
+      #OpenMouth,
+      #CloseMouth {
+        fill: yellow;
+        stroke: black;
+        stroke-width: 2;
+      }
+      #CloseMouth {
+        display: none;
+      }
+      #Packman {
+        transition: all 2s linear;
+      }
+        #Packman:hover {
+            transform: translateX(100px);
+        }
+    </style>
+  </head>
+  <body>
+    <svg id="Packman"
+      width="405"
+      height="432"
+      viewBox="0 0 405 432"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <path
+          id="OpenMouth"
+          d="M400 212C400 162.723 383.856 115 354.369 77.1077C324.882 39.2157 283.911 13.5447 238.562 4.54714C193.213 -4.45044 146.346 3.79287 106.091 27.8474C65.8353 51.9019 34.7298 90.2504 18.1691 136.242C1.60849 182.233 0.637269 232.967 15.4239 279.643C30.2106 326.319 59.8225 365.994 99.1238 391.787C138.425 417.58 184.937 427.864 230.592 420.855C276.248 413.845 318.167 389.986 349.08 353.413L202.5 212H400Z"
+        />
+      </g>
+
+      <g>
+        <path
+          id="CloseMouth"
+          d="M400 212C400 156.553 379.571 103.333 343.131 63.8517C306.69 24.3701 257.168 1.7994 205.273 1.0208C153.379 0.24221 103.282 21.3183 65.8188 59.6911C28.3552 98.0639 6.5353 150.649 5.07789 206.075C3.62047 261.5 22.6427 315.312 58.0308 355.871C93.4188 396.43 142.328 420.478 194.182 422.813C246.036 425.148 296.667 405.583 335.124 368.349C373.581 331.116 396.775 279.206 399.689 223.846L202.5 212L400 212Z"
+        />
+      </g>
+    </svg>
+
+    <script>
+      TweenMax.to("#OpenMouth", 2, {
+        morphSVG: "#CloseMouth",
+        repeat: -1,
+        yoyo: true,
+        ease: Power1.easeInOut,
+      });
+    </script>
+  </body>
+</html>
