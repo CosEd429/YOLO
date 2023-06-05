@@ -54,16 +54,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .Harry-Potter-Characters {
+  width: 200px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: column wrap;
+  flex-direction: column;
+  transition: 5s ease-in all;
+  position: relative;
 }
 
 .CharactersTXT{
@@ -72,5 +73,11 @@ body {
   color: lime;
   text-align:center;
   background-color: white;
+  display:none;
+  position: absolute;
+}
+
+.Harry-Potter-Characters:hover .CharactersTXT{
+  display:block;
 }
 
