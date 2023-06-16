@@ -67,17 +67,16 @@ body {
   position: relative;
 }
 
-.CharactersTXT{
+.CharactersTXT {
   font-size: 20px;
   font-weight: bold;
   color: lime;
-  text-align:center;
+  text-align: center;
   background-color: white;
-  display:none;
+  display: none;
   position: absolute;
 }
 
-.Harry-Potter-Characters:hover .CharactersTXT{
-  display:block;
+.Harry-Potter-Characters:hover .CharactersTXT {
+  display: block;
 }
-
