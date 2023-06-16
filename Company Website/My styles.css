@@ -73,10 +73,19 @@ body {
   color: lime;
   text-align: center;
   background-color: white;
-  display: none;
-  position: absolute;
+}
+.Harry-Potter-Characters-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1900px;
 }
 
-.Harry-Potter-Characters:hover .CharactersTXT {
-  display: block;
+.CharactersTXT-Page {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
 }
+
