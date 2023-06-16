@@ -89,3 +89,16 @@ body {
   background-color: white;
 }
 
+.box {
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+.Harry-Potter-Characters-Page img {
+  width: 400px;
+  height: 500px;
+}
