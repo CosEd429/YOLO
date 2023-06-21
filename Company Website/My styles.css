@@ -70,7 +70,7 @@ body {
 .CharactersTXT {
   font-size: 20px;
   font-weight: bold;
-  color: lime;
+  color: black;
   text-align: center;
   background-color: white;
 }
@@ -90,10 +90,10 @@ body {
 }
 
 .box {
-  width: 400px;
-  height: 550px;
+  width: 500px;
+  height: 700px;
   border: 1px solid black;
-  padding: 5px;
+  padding: 15px;
   margin: 0;
   text-align: center;
 }
@@ -102,3 +102,58 @@ body {
   width: 400px;
   height: 500px;
 }
+
+.Harry-Potter-Characters-Page p {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+}
+
+.Characters2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Fantastic-Beasts-Characters {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: 5s ease-in all;
+  position: relative;
+}
+
+.Fantastic-Beasts-Characters-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1900px;
+}
+
+.Fantastic-Beasts-Characters-Page img {
+  width: 400px;
+  height: 500px;
+}
+
+.Fantastic-Beasts-Characters-Page p {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+}
+
+.Fantastic-Beasts-Characters-Page .box {
+  width: 400px;
+  height: 550px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+
