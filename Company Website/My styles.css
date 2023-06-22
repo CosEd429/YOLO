@@ -113,16 +113,16 @@ body {
 .Characters2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .Fantastic-Beasts-Characters {
-  width: 200px;
+  width: 150px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   transition: 5s ease-in all;
   position: relative;
 }
