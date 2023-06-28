@@ -4,16 +4,19 @@ a {
 }
 
 .Active {
+  all: unset;
   background-color: turquoise;
 }
 
 .LinkOnTheNavbar {
+  all: unset;
   border-radius: 50px;
   padding: 10px;
   margin: 5px;
 }
 
 .NotActive {
+  all: unset;
   background-color: rgba(168, 130, 130, 0.74);
 }
 p {
@@ -23,6 +26,7 @@ p {
 }
 
 .navBar {
+  all: unset;
   background: linear-gradient(to right, blue, yellow);
   display: flex;
   justify-content: center;
@@ -31,15 +35,18 @@ p {
 }
 
 .NavBarLinks {
+  all: unset;
   width: 50%;
   display: flex;
   justify-content: space-evenly;
 }
 #LOGO {
+  all: unset;
   display: inline-block;
 }
 
 #LOGO img {
+  all: unset;
   height: 100px;
   width: 100px;
 }
@@ -51,6 +58,7 @@ body {
 }
 
 .Characters {
+  all: unset;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -60,6 +68,7 @@ body {
 }
 
 .Harry-Potter-Characters {
+  all: unset;
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -68,6 +77,7 @@ body {
 }
 
 .CharactersTXT {
+  all: unset;
   font-size: 20px;
   font-weight: bold;
   color: black;
@@ -75,6 +85,7 @@ body {
   background-color: white;
 }
 .Harry-Potter-Characters-Page {
+  all: unset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,6 +94,7 @@ body {
 }
 
 .CharactersTXT-Page {
+  all: unset;
   font-size: 30px;
   font-weight: bold;
   color: black;
@@ -90,6 +102,7 @@ body {
 }
 
 .box {
+  all: unset;
   width: 500px;
   height: auto !important;
   border: 1px solid black;
@@ -99,11 +112,13 @@ body {
 }
 
 .Harry-Potter-Characters-Page img {
+  all: unset;
   width: 400px;
   height: 500px;
 }
 
 .Harry-Potter-Characters-Page p {
+  all: unset;
   font-size: 20px;
   font-weight: bold;
   color: black;
@@ -111,6 +126,7 @@ body {
 }
 
 .Characters2 {
+  all: unset;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -120,14 +136,16 @@ body {
 }
 
 .Fantastic-Beasts-Characters {
+  all: unset;
   width: 150px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   transition: 5s ease-in all;
   position: relative;
 }
 
 .Fantastic-Beasts-Characters-Page {
+  all: unset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,11 +154,13 @@ body {
 }
 
 .Fantastic-Beasts-Characters-Page img {
+  all: unset;
   width: 400px;
   height: 500px;
 }
 
 .Fantastic-Beasts-Characters-Page p {
+  all: unset;
   font-size: 20px;
   font-weight: bold;
   color: black;
@@ -148,6 +168,7 @@ body {
 }
 
 .Fantastic-Beasts-Characters-Page .box {
+  all: unset;
   width: 400px;
   height: 550px;
   border: 1px solid black;
@@ -157,20 +178,24 @@ body {
 }
 
 .Products {
+  all: unset;
   display: flex;
   flex-wrap: wrap;
 }
 
 .Products img {
+  all: unset;
   width: 300px;
   height: 300px;
 }
 
 .Creatures {
-margin: auto;
+  all: unset;
+  margin: auto;
 }
 
 .Products h1 {
+  all: unset;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -179,8 +204,51 @@ margin: auto;
 }
 
 .Products a {
+  all: unset;
   background-color: white;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="Mobile"] {
+    width: 100%;
+  }
+  .navBar {
+    background: linear-gradient(to right, blue, yellow);
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+  }
+  .LinkOnTheNavbar {
+    border-radius: 50px;
+    padding: 10px;
+    margin: 5px;
+  }
+  .Active {
+    background-color: turquoise;
+  }
+  .NotActive {
+    background-color: rgba(168, 130, 130, 0.74);
+  }
+  .NavBarLinks {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #LOGO {
+    display: inline-block;
+  }
+  #LOGO img {
+    height: 100px;
+    width: 100px;
+  }
+  body {
+    background-image: url("Images for Website/Harry\ Potter\ and\ Newt\ Scamander.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
