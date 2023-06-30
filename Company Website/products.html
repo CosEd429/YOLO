@@ -4,28 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="My styles.css" />
     <title>Products</title>
   </head>
-  <div class="navBar">
-    <div id="LOGO">
-      <img src="./Images for website/Centaur.jpg" />
-    </div>
-    <div class="NavBarLinks">
-      <a class="LinkOnTheNavbar NotActive" href="./home.html">Home Page</a>
-      <a
-        class="LinkOnTheNavbar NotActive"
-        href="./characters(harry potter).html"
-        >Harry Potter</a
-      >
-      <a class="LinkOnTheNavbar Active" href="./products.html">Products</a>
-      <a
-        class="LinkOnTheNavbar NotActive"
-        href="./characters(fantastic beasts).html"
-      >
-        Fantastic Beasts</a
-      >
-    </div>
+  <div class="navBar" id="MyNavBar">
+    <a href="home.html" >HomePage</a>
+    <a href="characters(harry potter).html">Harry Potter</a>
+    <a href="products.html" class="Active">Products</a>
+    <a href="characters(fantastic beasts).html">Fantastic Beasts</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
   <body>
     <div class="Products">
@@ -46,5 +36,15 @@
         <h1>Billywig 30$</h1><a href="./Products/Billywig.html">More Info</a>
       </div>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("MyNavBar");
+        if (x.className === "navBar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navBar";
+        }
+      }
+      </script>
   </body>
 </html>

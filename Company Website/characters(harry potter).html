@@ -5,26 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="My styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Harry Potter</title>
   </head>
 
   <body>
-    <div class="navBar">
-      <div id="LOGO">
-        <img src="./Images for website/Basilisk.jpg" />
-      </div>
-      <div class="NavBarLinks">
-        <a class="LinkOnTheNavbar NotActive" href="./home.html">Home Page</a>
-        <a class="LinkOnTheNavbar Active" href="./characters(harry potter).html"
-          >Harry Potter</a
-        >
-        <a class="LinkOnTheNavbar NotActive" href="./products.html">Products</a>
-        <a
-          class="LinkOnTheNavbar NotActive"
-          href="./characters(fantastic beasts).html"
-          >Fantastic Beasts</a
-        >
-      </div>
+    <div class="navBar" id="MyNavBar">
+      <a href="home.html">HomePage</a>
+      <a href="characters(harry potter).html" class="Active">Harry Potter</a>
+      <a href="products.html">Products</a>
+      <a href="characters(fantastic beasts).html">Fantastic Beasts</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <div class="Characters">
       <div class="Harry-Potter-Characters">
@@ -78,5 +71,15 @@
         </div>
       </div>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("MyNavBar");
+        if (x.className === "navBar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navBar";
+        }
+      }
+      </script>
   </body>
 </html>
