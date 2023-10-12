@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        var file_size = prompt("Enter the file size in MB");
+        var download_speed = prompt("Enter the download speed in MBit/s");
+        var download_time = (parseFloat(file_size) / parseFloat(download_speed));
+        alert("The remaining download time is: " + parseFloat(download_time) + " seconds");
+    </script>
+  </body>
+</html>
