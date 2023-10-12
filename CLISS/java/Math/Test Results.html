@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        var FirstTestGrade = prompt('Enter your First Test Grade');
+        var SecondTestGrade = prompt('Enter your Second Test Grade');
+        var ThirdTestGrade = prompt('Enter your Third Test Grade');
+
+        alert("The following grades were given " + FirstTestGrade + ","   + SecondTestGrade + "," +  ThirdTestGrade + "." );
+        alert("The sum of the grades are " + (parseFloat(FirstTestGrade) + parseFloat(SecondTestGrade) + parseFloat(ThirdTestGrade) ));
+        alert("The average of the grades are " + (parseFloat(FirstTestGrade) + parseFloat(SecondTestGrade) + parseFloat(ThirdTestGrade) ) / 3);
+        alert("the minimum of your grades are " + Math.min(FirstTestGrade, SecondTestGrade, ThirdTestGrade));
+        alert("the maximum of your grades are " + Math.max(FirstTestGrade, SecondTestGrade, ThirdTestGrade));
+    </script>
+  </body>
+</html>
