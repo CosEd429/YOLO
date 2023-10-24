@@ -5,7 +5,7 @@
         <title>Exercise 4.2.1</title>
     </head>
     <body>
-        <img id="fox" src="Fox.png" style="position:absolute;">
+        <img id="fox" src="../Pictures/Fox.png" style="position:absolute;">
         <button onclick="hide()"> Hide</button>
         <script>
             //1) Ask the user for the dimensions
@@ -15,11 +15,12 @@
             document.getElementById("fox").style.width = Xaxis + "px";
             document.getElementById("fox").style.height = Yaxis + "px";
             //2) change the position of the fox to the top right
-
+            document.getElementById("fox").style.top = "0px";
+            document.getElementById("fox").style.right = "0px";
             //3) Ask the user for the background color
-        
+            var color = prompt("Enter the background color: ");
             //change the background of the image
-
+            document.getElementById("fox").style.backgroundColor = color;
             //4)function to let the fox dissapear
             function hide()
             {
