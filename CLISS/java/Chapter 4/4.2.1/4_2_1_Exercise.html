@@ -5,8 +5,9 @@
         <title>Exercise 4.2.1</title>
     </head>
     <body>
-        <img id="fox" src="../Pictures/Fox.png" style="position:absolute;">
+        <img id="fox" src="Pictures/Fox.png" style="position:absolute;">
         <button onclick="hide()"> Hide</button>
+        <button onclick="show()"> Show</button>
         <script>
             //1) Ask the user for the dimensions
             var Yaxis = prompt("Enter the Y axis: ");
@@ -26,9 +27,19 @@
             {
                 //code here to let the fox disappear
                 //...
+                document.getElementById("fox").style.visibility = "hidden";
             }
 
             //5)create a second function to make the fox visible again
+            function show()
+            {
+                //code here to let the fox appear again
+                //...
+                document.getElementById("fox").style.visibility = "visible";
+
+            }
+
+
 
 
 
