@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise 4.3.1</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body style="text-align: center">
+    <h1>Manipulation of HTML elements</h1>
+    <h2 id="imageCaption">Winter Image</h2>
+    <img id="imageSeason" src="Pictures/Winter.jpg" width="400" height="300" />
+    <p id="oldText">
+      Click the button to display different manipulations of HTML elements.
+    </p>
+    <script>
+      document.getElementById("imageCaption").style.color = "white";
+      document.getElementById("imageCaption").style.background = "lightblue";
+      document.getElementById("imageCaption").style.padding = "10px";
+      document.getElementById("imageCaption").style.margin = "10px";
+    </script>
+    <button onclick="showBox()">Click me!</button>
+    <script>
+      function showBox() {
+        //Write here your code what should happen when the button is clicked!
+        //...
+        document.getElementById("imageCaption").innerHTML = "Summer Image";
+        document.getElementById("imageSeason").src = "Pictures/Summer.jpg";
+        document.getElementById("imageSeason").width = "400";
+        document.getElementById("imageSeason").height = "300";
+        document.getElementById("oldText").innerHTML =
+          "Summer look of HTML elements.";
+        document.getElementById("imageCaption").innerHTML = "Summer Image";
+        document.getElementById("imageCaption").style.color = "red";
+        document.getElementById("imageCaption").style.background = "orange";
+        document.getElementById("imageCaption").style.border =
+          "thick solid red";
+        document.getElementById("imageCaption").style.padding = "10px";
+        document.getElementById("imageCaption").style.margin = "10px";
+      }
+    </script>
+
+    <script>
+        function showBox() {
+      //Write here your code to switch back to the previous state!
+      //...
+      
+        }
+    </script>
+  </body>
+</html>
