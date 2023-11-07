@@ -6,24 +6,26 @@
     <title>Document</title>
   </head>
   <body>
-    <img src="Battery_status_low.png" />
+    <img id="Battery_Status" src="Battery_status_low.png" />
 
     <script>
       var battery = prompt("What is the current battery of your phone?");
 
       if (battery < 20) {
-        img.src = "Battery_status_low.png";
+        document.getElementById("Battery_Status").src =
+          "Battery_status_low.png";
 
         }
 
        else if (battery 20< battery <80)  {
-          img.src = "Battery_status_ok_2.png";
+        document.getElementById("Battery_Status").src =
+          "Battery_status_ok_2.png";
         }
 
         else {
-          img.src = "Battery_status_high.png";
+          document.getElementById("Battery_Status").src =
+            "Battery_status_high.png";
         }
-        
     </script>
   </body>
 </html>
