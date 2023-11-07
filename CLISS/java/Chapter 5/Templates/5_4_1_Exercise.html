@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Exercise 5.4.1 Login
+        </title>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <form> 
+            <div>
+                <label>Please enter your user name:</label>
+                <input type="text" id="userNameField">
+            </div>
+            <div>
+                <label>Please enter your password:</label>
+                <input type="password" id="passwordField">
+            </div>
+            <div>
+                <input value="Login" type="button" id="loginButton">
+            </div>
+        <script>
+        "use strict";
+        document.getElementById("loginButton").addEventListener("click", userLogin)
+
+        //here should the constants for username and password be declared
+
+        function userLogin ()
+        {
+            //write here your function when the user wants to login in
+            //...
+          
+            var userName = document.getElementById("userNameField").value;
+            var password = document.getElementById("passwordField").value;
+            if (userName == "admin" && password == "admin")
+            {
+                alert("Login successful!");
+            }
+            else
+            {
+                alert("Login failed!");
+            }
+    }
+        </script>
+        </form>
+    </body>
+</html>
