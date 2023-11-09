@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var testgrade1 = parseInt(prompt("What is your first test grade?"));
+      var testgrade2 = parseInt(prompt("What is your second test grade?"));
+      var testgrade3 = parseInt(prompt("What is your third test grade?"));
+
+      //..display: the biggest one,
+
+      if (testgrade1 > testgrade2 && testgrade1 > testgrade3) {
+        alert("Your biggest grade is " + testgrade1);
+      } else if (testgrade2 > testgrade1 && testgrade2 > testgrade3) {
+        alert("Your biggest grade is " + testgrade2);
+      } else if (testgrade3 > testgrade1 && testgrade3 > testgrade2) {
+        alert("Your biggest grade is " + testgrade3);
+      }
+
+      //.. display: these three numbers in ascending order
+
+      if (testgrade1 > testgrade2 && testgrade1 > testgrade3) {
+        if (testgrade2 > testgrade3) {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade3 +
+              ", " +
+              testgrade2 +
+              ", " +
+              testgrade1
+          );
+        } else {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade2 +
+              ", " +
+              testgrade3 +
+              ", " +
+              testgrade1
+          );
+        }
+      } else if (testgrade2 > testgrade1 && testgrade2 > testgrade3) {
+        if (testgrade1 > testgrade3) {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade3 +
+              ", " +
+              testgrade1 +
+              ", " +
+              testgrade2
+          );
+        } else {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade1 +
+              ", " +
+              testgrade3 +
+              ", " +
+              testgrade2
+          );
+        }
+      } else if (testgrade3 > testgrade1 && testgrade3 > testgrade2) {
+        if (testgrade1 > testgrade2) {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade2 +
+              ", " +
+              testgrade1 +
+              ", " +
+              testgrade3
+          );
+        } else {
+          alert(
+            "Your grades in ascending order are " +
+              testgrade1 +
+              ", " +
+              testgrade2 +
+              ", " +
+              testgrade3
+          );
+        }
+      }
+
+      //.. display: the average of these three numbers and indicate if the average is sufficient or not (please round always up)
+
+      var average = (testgrade1 + testgrade2 + testgrade3) / 3;
+      var averageRounded = Math.ceil(average);
+      alert("Your average grade is " + averageRounded);
+
+      if (averageRounded >= 37) {
+        alert("Your average grade is sufficient!");
+      } else {
+        alert("Your average grade is not sufficient!");
+      }
+    </script>
+  </body>
+</html>
