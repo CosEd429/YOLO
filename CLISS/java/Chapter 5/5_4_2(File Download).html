@@ -5,5 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+
+    <script>
+
+      let mb= prompt("What is the size of the file in MB?");
+      let bit=prompt("What is the size of the file in bit?");
+
+      let mbit=parseFloat(bit) / 8;
+      let time=parseFloat(mb) / mbit;
+
+
+      
+      //if its above less than 60 seconds the text should be coloured green
+
+      if (time < 60) {
+        document.write("<p style='color:green'>" +"The remaining download time is " + time + " seconds" + "</p>");
+      }
+
+      //if its above 60 seconds the text should be coloured orange
+
+      else if (time > 60) {
+        document.write("<p style='color:orange'>" + "The remaining download time is " + time + " seconds" + "</p>");
+      }
+    </script>
+  </body>
 </html>
