@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Create a math quiz with 5 different questions and answers
+
+      //Question 1
+
+      let score = 0;
+
+      let randomNum1 =parseInt(Math.random() * 100)
+      let randomNum2 =parseInt(Math.random() * 100)
+      let q1 = "What is " + randomNum1 + " + " + randomNum2 + "?";
+      let a1 = randomNum1 + randomNum2;
+      var answer = prompt(q1);
+      if (answer == a1) {
+        alert("Correct");
+        score += 1;
+      } else {
+        alert("Incorrect");
+      }
+
+      //Question 2
+
+      randomNum1 =parseInt(Math.random() * 100)
+      randomNum2 =parseInt(Math.random() * 100)
+
+      let q2 = "What is " + randomNum1 + " - " + randomNum2 + "?";
+      let a2 = randomNum1 - randomNum2;
+      answer = prompt(q2);
+      if (answer == a2) {
+        alert("Correct");
+        score += 1;
+      } else {
+        alert("Incorrect");
+      }
+
+      //Question 3
+
+      randomNum1 =parseInt(Math.random() * 100)
+      randomNum2 =parseInt(Math.random() * 100)
+
+      let q3 = "What is " + randomNum1 + " * " + randomNum2 + "?";
+      let a3 = randomNum1 * randomNum2;
+      answer = prompt(q3);
+      if (answer == a3) {
+        alert("Correct");
+        score += 1;
+      } else {
+        alert("Incorrect");
+      }
+
+      //Question 4
+
+      randomNum1 = parseInt(Math.random() * 100);
+      randomNum2 = parseInt(Math.random() * 100);
+
+      let q4 = "What is " + randomNum1 + " / " + randomNum2 + "?";
+      let a4 = randomNum1 / randomNum2;
+      answer = prompt(q4);
+      if (answer == a4) {
+        alert("Correct");
+        score += 1;
+      } else {
+        alert("Incorrect");
+      }
+
+      //Question 5
+
+      randomNum1 =parseInt(Math.random() * 100)
+      randomNum2 =parseInt(Math.random() * 100)
+
+      let q5 = "What is " + randomNum1 + " + " + randomNum2 + "?";
+      let a5 = randomNum1 + randomNum2;
+      answer = prompt(q5);
+      if (answer == a5) {
+        alert("Correct");
+        score += 1;
+      } else {
+        alert("Incorrect");
+      }
+
+      //After the quiz, display the score to the user. Depeding on the score, display a different message
+
+      if (score == 0) {
+        alert("You should definitely practice more your math skills.");
+      } else if (score == 1 || score == 2) {
+        alert("Not bad, but there is still space for improvement.");
+      } else if (score == 3 || score == 4) {
+        alert("Well done you reached a good score.");
+      } else if (score == 5) {
+        alert("Amazing you have achieved the highest possible score");
+      }
+    </script>
+  </body>
+</html>
