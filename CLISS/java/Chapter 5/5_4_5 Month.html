@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+
+    //Write a script that returns to the user the number of days a month has depending on the entry. For example, if the user types in the month “May” the program return the message “The month May has 31 days”.
+    
+    let month = prompt("Enter a month");
+    let days = 0;
+
+    if (month == "January" || month == "March" || month == "May" || month == "July" || month == "August" || month == "October" || month == "December") {
+        days = 31;
+        document.write("The month " + month + " has " + days + " days");
+    } else if (month == "April" || month == "June" || month == "September" || month == "November") {
+        days = 30;
+        document.write("The month " + month + " has " + days + " days");
+    } else if (month == "February") {
+        var year = prompt("input year");
+        if(year == "2024" || year == "2028"){
+            days = 29;
+        } else {
+            days = 28;
+        }
+        document.write("The month " + month + " has " + days + " days");
+    } else {
+        alert("Invalid month");
+    }
+</script>
