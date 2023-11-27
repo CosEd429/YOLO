@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">Double it</button>
+    <script>
+      let x = prompt("Enter a number");
+      alert(x)
+      result= x;
+        document.getElementById("button").addEventListener("click", double);
+        function double() {
+          result = result * 2;
+          alert(result);
+        };
+    </script>
+  </body>
+</html>
