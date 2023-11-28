@@ -18,7 +18,7 @@
       document.getElementById("imageCaption").style.padding = "10px";
       document.getElementById("imageCaption").style.margin = "10px";
     </script>
-    <button onclick="showBox()">Click me!</button>
+    <button id="button" onclick="showBox()">Click me!</button>
     <script>
       function showBox() {
         //Write here your code what should happen when the button is clicked!
@@ -36,13 +36,28 @@
           "thick solid red";
         document.getElementById("imageCaption").style.padding = "10px";
         document.getElementById("imageCaption").style.margin = "10px";
+
+        document.getElementById("button").onclick = undoBox
       }
     </script>
 
     <script>
-        function showBox() {
+        function undoBox() {
       //Write here your code to switch back to the previous state!
       //...
+      document.getElementById("imageCaption").innerHTML = "Winter Image";
+      document.getElementById("imageSeason").src = "Pictures/Winter.jpg";
+      document.getElementById("imageSeason").width = "400";
+      document.getElementById("imageSeason").height = "300";
+      document.getElementById("oldText").innerHTML = "Click the button to display different manipulations of HTML elements."
+      document.getElementById("imageCaption").style.color = "white";
+      document.getElementById("imageCaption").style.background = "lightblue";
+      document.getElementById("imageCaption").style.padding = "10px";
+      document.getElementById("imageCaption").style.margin = "10px";
+      document.getElementById("imageCaption").style.border = "none";
+
+      document.getElementById("button").onclick = showBox
+
         }
     </script>
   </body>
