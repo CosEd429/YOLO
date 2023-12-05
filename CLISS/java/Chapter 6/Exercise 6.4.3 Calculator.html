@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="number1" />
+    <input type="number" id="number2" />
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <p id="result"></p>
+    <script>
+      //Write a JavaScript program to calculate multiplication and division of two numbers (input from user). If the user wants to divide a number by 0 display the error message “Error: Number cannot be divided by 0!”
+
+      let result = 0;
+
+      let multiply = function () {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        result = number1 * number2;
+        document.getElementById("result").innerHTML = result;
+      };
+
+      let divide = function () {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        if (number2 == 0) {
+          document.getElementById("result").innerHTML =
+            "Error: Number cannot be divided by 0!";
+        } else {
+          result = number1 / number2;
+          document.getElementById("result").innerHTML = result;
+        }
+      };
+    </script>
+  </body>
+</html>
