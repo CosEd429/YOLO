@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6.4.4</title>
+</head>
+<body style="text-align: center;">
+    
+    <h1 id="topName">Intel Processors</h1>
+
+    <br>
+
+    <p>Choose one of the three intel processors, which you want to display (i.e. i3, i5 or i7)</p>
+    <br>
+    <input type="text" id="processorField" name="name"  minlength="5" maxlength="10" size="25" style="text-align: center;" >
+    <br>
+    <br>
+    
+    <button id="displayButton">Display</button>
+
+    <br>
+    <p id="outputText"></p>
+    <img id="processorPicture" src="">
+
+    <script>
+    //start coding here
+    //When confirming a button, the user is asked for the name of an Intel processor via an input window. If the user enters i3, i5 or i7, the corresponding logo is displayed on the page, otherwise an error message is displayed
+    
+    document.getElementById("displayButton").addEventListener("click", display);
+    function display() {
+        if (document.getElementById("processorField").value == "i3") {
+            document.getElementById("processorPicture").src = "i3.jpg";
+        } else if (document.getElementById("processorField").value == "i5") {
+            document.getElementById("processorPicture").src = "i5.jpg";
+        } else if (document.getElementById("processorField").value == "i7") {
+            document.getElementById("processorPicture").src = "i7.png";
+        } else {
+            document.getElementById("outputText").innerHTML = "Error: Please enter i3, i5 or i7";
+        }
+    }
+
+
+
+    </script>
+
+</body>
+</html>
