@@ -8,12 +8,15 @@
     <button onclick="SpeedUp();">Speed Up</button>
     <button onclick="SlowDown();">Slow Down</button>
     <button onclick="DefaultSpeed();">NormalSpeed</button>
+
     <img src="gorilla236x256.png" id="gorillaImage" />
     <script>
       "use strict";
+      let positionX = 0;
+      let positionY = 0;
 
       let gorilla;
-	  const gorillaspeed= 10;
+      let gorillaspeed = 10;
 
       // 1. Remove the buttons from the template and modify the script so that the gorilla can be moved with the arrow keys.
 
@@ -35,39 +38,39 @@
         });
       }
       function moveLeft() {
-        gorilla.style.left = parseInt(gorilla.style.left) - 10 + "px";
+        gorilla.style.left = parseInt(gorilla.style.left) - gorillaspeed + "px";
       }
       function moveRight() {
-        gorilla.style.left = parseInt(gorilla.style.left) + 10 + "px";
+        gorilla.style.left = parseInt(gorilla.style.left) + gorillaspeed + "px";
       }
       function moveUp() {
-        gorilla.style.top = parseInt(gorilla.style.top) - 10 + "px";
+        gorilla.style.top = parseInt(gorilla.style.top) - gorillaspeed + "px";
       }
       function moveDown() {
-        gorilla.style.top = parseInt(gorilla.style.top) + 10 + "px";
+        gorilla.style.top = parseInt(gorilla.style.top) + gorillaspeed + "px";
       }
       //2.Add the possibility for the user to change the number of pixels that the gorilla moves when a button is clicked.
-	  function SpeedUp() {
-		gorilla.style.left = parseInt(gorilla.style.left) - gorillaspeed + "px";
-	  }
-	  function SlowDown() {
-		gorilla.style.left = parseInt(gorilla.style.left) + gorillaspeed + "px";
-	  }
+      function SpeedUp() {
+        gorillaspeed = gorillaspeed + 10;
+      }
+      function SlowDown() {
+        gorillaspeed = gorillaspeed - 10;
+      }
 
-	  function DefaultSpeed() {
-		gorilla.style.left = parseInt(gorilla.style.left) + 0 + "px";
-	  }
-	 
-	  
+      function DefaultSpeed() {
+        gorillaspeed = gorillaspeed;
+      }
 
-      
-	 
-	 
-	 
-	 
-	  addEventListener("load", init);
+      addEventListener("load", init);
 
-      //3.Make a copy of your script and try to move the gorilla by taking the position of your mouse
+      //3.Make a copy of your script and try to move the gorilla by taking the position of your mouse pointer into account.
+      //captures the current x and y coordinates of the mouse
+      function currentPosition(event) {
+        positionX = event.clientX;
+        positionY = event.clientY;
+        gorilla.style.left = positionX + "px";
+        gorilla.style.top = positionY + "px"; 
+      }
     </script>
   </body>
 </html>
