@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>8.5.3 Exercise</title>
+        
+        <style type="text/css">
+            table
+            {
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Student List</h1>
+        
+        <form action="">
+            <label for="name">Student name: </label>
+            <input type="text" id="name">
+            <br>
+            
+            <label for="age">Age: </label>
+            <input type="text" id="age">
+            <br>
+            
+            <label for="gender">Gender: </label>
+            <input type="text" id="gender">
+            <br>
+            
+            <input type="button" id="submit" value="Submit">
+            <br>
+        </form>
+        
+        <table id="table">
+            <tr>
+                <th>Student name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </table>
+    
+        <script>
+        //check out this link for help: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow 
+        document.getElementById("submit").addEventListener("click",addStudent);
+        
+        function addStudent()
+        {
+             //write here your code
+            //...
+        }
+        
+        </script>
+    </body>
+</html>

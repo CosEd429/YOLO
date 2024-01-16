@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Exercise 8.5.4: Form validation</title>
+  <script type="text/javascript">
+      function CheckAndSubmit () {
+          //Please write here your code
+      }
+  </script>
+</head>
+<body>
+  <form id="regForm" method="post" action="#URL#" onsubmit="return CheckAndSubmit ()">
+      User Name: <input type="text" name="userName" id="userName" />
+      <br />
+      E-mail: <input type="text" name="email" id="email" />
+      <br />
+      Phone number: <input type="text" name="phone" id="phone" />
+      <br /><br />
+      <input type="checkbox" name="acceptAgreement" id="acceptAgreement" /> 
+      <label for="acceptAgreement">I accept the User Agreement and Privacy Policy</label>
+      <br /><br />
+      <label for="comment">Comment:</label>
+      <textarea name="comment" id="comment"> </textarea>
+      <br /><br />
+      <input type="submit" value="Register" />
+  </form>
+</body>

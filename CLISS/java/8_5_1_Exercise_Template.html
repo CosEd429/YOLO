@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+</html lang=en>
+    <head>
+    <title>Exercise 8.5.1 Song Duration Template </title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+
+    <label for="songs">Select the songs you want to know the total time?</label><br>
+    <select id="songs" name="choice" multiple size="5">
+        <option value="188">Song 1</option>
+        <option value="195">Song 2</option>
+        <option value="138">Song 3</option>
+        <option value="183">Song 4</option>
+        <option value="155">Song 5</option>
+        </select>
+        <br>
+        <button name="calculate" id="calculate">
+            Song Duration
+        </button>
+        <p id="result">
+        </p>
+
+        <script>
+        let calculateButton = document.getElementById("calculate");
+        let itemList = document.getElementById("songs");
+        let resultBox = document.getElementById("result");
+        
+        calculateButton.addEventListener("click", calculateTotalSongDuration);
+        function calculateTotalSongDuration()
+        {
+            //write in here your code
+        }
+        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions
+        </script>
+    </body>
+</html>

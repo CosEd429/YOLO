@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+</html lang=en>
+    <head>
+    <title>Exercise 7.3.5 Calculator </title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form>
+            1st Number : <input type="number" id="firstNumber" /><br>
+            2nd Number: <input type="number" id="secondNumber" /><br>
+            <input type="button" onClick="calculate()" Value="Calculate" />
+            </form>
+            <p>The result is : <br>
+            <span id = "result"></span>
+            </p>
+        <script>
+           //start coding here
+              function calculate(){
+                let firstNumber = document.getElementById("firstNumber").value;
+                let secondNumber = document.getElementById("secondNumber").value;
+                let result = firstNumber ** secondNumber;
+                document.getElementById("result").innerHTML = result;
+              }
+
+        </script>
+    </body>
+</html>
