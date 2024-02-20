@@ -13,8 +13,25 @@
             <p>The result is : <br>
             <span id = "result"></span>
             </p>
+            <p id="input" > </p>
         <script>
-           //start coding here           
+           //start coding here   
+           
+              document.getElementById("cButton").addEventListener("click", calculate);
+            
+
+                function calculate(){
+                    let aNumber = document.getElementById("aNumber").value;
+                    let result = 0;
+                    for(let i = 1; i <= aNumber; i++){
+                        result += i;
+                        document.getElementById("input").innerHTML += i + "<br>"
+                    }
+                    document.getElementById("result").innerHTML = result;
+                   
+                }
+                
+
         </script>
     </body>
 </html>

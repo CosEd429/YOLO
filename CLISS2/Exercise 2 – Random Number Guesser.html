@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let randomNumber = Math.floor(Math.random() * 11);
+      let guess = prompt("Guess a number between 0 and 10");
+      if (guess == randomNumber) {
+        alert("I chose " + randomNumber + "! You guessed correctly!");
+      }
+      if (guess > randomNumber && guess < 11) {
+        alert("I chose " + randomNumber + "! Your guess is too high!");
+      }
+      if (guess < randomNumber && guess > -1) {
+        alert("I chose " + randomNumber + "! Your guess is too low!");
+      } else if (guess < 0 || guess > 10) {
+        alert(
+          "Error: Your guess is outside of the allowed range! Please try again."
+        );
+      }
+    </script>
+  </body>
+</html>
