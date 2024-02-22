@@ -10,9 +10,9 @@
 
         // Write a script that will write numbers from 100 to 0 to the console, but in steps of 10, so 100, 90, 80... etc
 
-        for (let i = 100; i >= 0; i -= 10) {
-            console.log(i);
-        }
+        //for (let i = 100; i >= 0; i -= 10) {
+       //     console.log(i);
+       // }
 
         //Modify the script so that it asks the user for the start and end number it uses instead of 100 and 0. Check if the entered values are correct (that the start number is greater than the end number). If it’s not correct, output an error message in an alert box
         //Modify the script so that numbers that are divisible by 4 are outputted in green.
@@ -20,15 +20,17 @@
         let end = parseInt(prompt("Enter end number"));
 
         if (start < end) {
+            alert("Error starting number is less than ending number");
+        }
+        else {
             for (let i = start; i >= end; i -= 10) {
                 if (i % 4 === 0) {
                     console.log("%c" + i, "color: green");
-                } else {
+                }
+                else {
                     console.log(i);
                 }
             }
-        } else {
-            alert("Start number must be greater than end number");
         }
     </script>
 </body>
