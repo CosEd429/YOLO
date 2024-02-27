@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Demo</title>
+</head>
+<body>
+    <script>
+        let correctAnswerCount = 0;
+        let wrongAnswerCount = 0;
+
+        let question;
+        let answer;
+        let userAnswer;
+
+        question = "What is the capital of Germany?";
+        answer = "Berlin";
+        userAnswer = prompt(question);
+        if(userAnswer == answer) {
+            alert("Your answer was correct!");
+            correctAnswerCount++;
+        }
+        else {
+            alert("Your answer was wrong!");
+            wrongAnswerCount++;
+        }
+
+        question = "What is the name of the largest country in the world?";
+        answer = "Russia";
+        userAnswer = prompt(question);
+        if(userAnswer == answer) {
+            alert("Your answer was correct!");
+            correctAnswerCount++;
+        }
+        else {
+            alert("Your answer was wrong!");
+            wrongAnswerCount++;
+        }
+
+        question = "Where is the Eiffel Tower located?";
+        answer = "Paris";
+        userAnswer = prompt(question);
+        if(userAnswer == answer) {
+            alert("Your answer was correct!");
+            correctAnswerCount++;
+        }
+        else {
+            alert("Your answer was wrong!");
+            wrongAnswerCount++;
+        }
+
+        question = "What is the name of the largest ocean in the world?";
+        answer = "Pacific";
+        userAnswer = prompt(question);
+        if(userAnswer == answer) {
+            alert("Your answer was correct!");
+            correctAnswerCount++;
+        }
+        else {
+            alert("Your answer was wrong!");
+            wrongAnswerCount++;
+        }
+
+        question = "What country are the Great Pyramids of Giza located in?";
+        answer = "Egypt";
+        userAnswer = prompt(question);
+        if(userAnswer == answer) {
+            alert("Your answer was correct!");
+            correctAnswerCount++;
+        }
+        else {
+            alert("Your answer was wrong!");
+            wrongAnswerCount++;
+        }
+
+        alert("You answered " + correctAnswerCount + " question right and " + wrongAnswerCount + " questions wrong!");
+    </script>
+</body>
+</html>
