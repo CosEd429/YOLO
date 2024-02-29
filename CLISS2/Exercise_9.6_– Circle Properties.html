@@ -14,10 +14,27 @@
     <p id="circleResults"></p>
 
     <script>
+
+        const result = document.getElementById('circleResults');
+
         //Displays the properties of the circle (is called when the button is clicked)
         function showCircleInfo() {
-
+            let radius= document.getElementById('circleRadius').value;
+         
         }
+
+        function CircleDiameter(radius) {
+            return 2 * radius;
+        }
+
+        function CircleCircumference(radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        function CircleArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
     </script>
 </body>
 </html>
