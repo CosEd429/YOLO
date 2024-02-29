@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The user shouuld be asked for his name, height in cm, weight in kg and the values must be saved in variables
+        let name = prompt("What is your name?");
+        let height = parseFloat(prompt("What is your height in cm?"));
+        let weight = parseFloat(prompt("What is your weight in kg?"));
+
+        //convert the height from cm to m
+
+        heightM = height / 100;
+
+        //Calculate the formula and the decimals should be rounded to the nearest integer
+
+        let bmi = Math.round(weight / (heightM ** 2));
+
+        alert("Hi" + " " + name + "!" + "\nWith a height of " + heightM + "m and a weight of " + weight + "kg, your BMI is " + bmi);
+    </script>
+</body>
+</html>
