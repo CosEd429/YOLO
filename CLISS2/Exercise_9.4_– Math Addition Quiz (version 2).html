@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Quiz</title>
+</head>
+<body>
+    <script>
+        //Question 1
+        askMathquestion(3, 4 )
+
+        //Question 2
+        askMathquestion(29, 85 )
+
+        //Question 3
+        askMathquestion(115, 492 )
+       
+        //Question 4
+        askMathquestion(11523, 4865 )
+
+        function askMathquestion(number1, number2) {
+            let correctAnswer = number1 + number2;
+            let userAnswer = parseInt(prompt("What is " + number1 + "+" + number2 + "?"));
+            if(userAnswer == correctAnswer) {
+                alert("Correct!");
+            }
+            else {
+                alert("Incorrect!");
+            }
+        }
+    </script>
+</body>
+
+</html>
