@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 	<head>
 		<title>Additional Exercise - Phone Call</title>
-		<meta charset=UTF-8>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" href="grid.css">
 	</head>
 	<body>
 		
 		  <div class="row"> 
 			<div class="column">
-			  <img src=Phone_Call_Images/Phone_Number_1.png id="im1" width=200 height=220>
-			  <img src=Phone_Call_Images/Phone_Number_2.png id="im2" width=200 height=220>
-			  <img src=Phone_Call_Images/Phone_Number_3.png id="im3" width=200 height=220>
+			  <img src="Phone_Call_Images/Phone_Number_1.png" id="im1" width="200" height="220" onclick="callNumber(1)">
+			  <img src="Phone_Call_Images/Phone_Number_2.png" id="im2" width="200" height="220" onclick="callNumber(2)">
+			  <img src="Phone_Call_Images/Phone_Number_3.png" id="im3" width="200" height="220" onclick="callNumber(3)">
 			</div>
 			<div class="column">
-				<img src=Phone_Call_Images/Phone_Number_4.png id="im4" width=200 height=220>
-				<img src=Phone_Call_Images/Phone_Number_5.png id="im5" width=200 height=220>
-				<img src=Phone_Call_Images/Phone_Number_6.png id="im6" width=200 height=220>
+				<img src="Phone_Call_Images/Phone_Number_4.png" id="im4" width="200" height="220" onclick="callNumber(4)">
+				<img src="Phone_Call_Images/Phone_Number_5.png" id="im5" width="200" height="220" onclick="callNumber(5)">
+				<img src="Phone_Call_Images/Phone_Number_6.png" id="im6" width="200" height="220" onclick="callNumber(6)">
 			</div> 
 			<div class="column">
-				<img src=Phone_Call_Images/Phone_Number_7.png id="im7" width=200 height=220>
-				<img src=Phone_Call_Images/Phone_Number_8.png id="im8" width=200 height=220>
-				<img src=Phone_Call_Images/Phone_Number_9.png id="im9" width=200 height=220 onclick="myFunction(9)">
+				<img src="Phone_Call_Images/Phone_Number_7.png" id="im7" width="200" height="220" onclick="callNumber(7)">
+				<img src="Phone_Call_Images/Phone_Number_8.png" id="im8" width="200" height="220" onclick="callNumber(8)">
+				<img src="Phone_Call_Images/Phone_Number_9.png" id="im9" width="200" height="220" onclick="callNumber(9)">
 				<!--When specifying a function to call in the onclick property, you can pass parameters to the function you want to call (see the onclick above)-->
 			</div>
 			<div class="column">
-				<img src=Phone_Call_Images/Phone_Number_0.png id="im0" width=200 height=220>
-				<img src=Phone_Call_Images/Phone_Pick_Up.png id="im10" width=200 height=200>
-				<img src=Phone_Call_Images/Erase_Number.png id="im11" width=200 height=200>
+				<img src="Phone_Call_Images/Phone_Number_0.png" id="im0" width="200" height="220" onclick="callNumber(0)">
+				<img src="Phone_Call_Images/Phone_Pick_Up.png" id="im10" width="200" height="200" onclick="startCall()">
+				<img src="Phone_Call_Images/Phone_Hang_Up.png" id="im11" width="200" height="200" onclick="endCall">
 			</div>
 		  </div>
 		<div>
@@ -35,10 +35,34 @@
 		</div>
 		<script>
 			let numberToCall = "";
-			let booleanCall = true;
+			let booleanCall = false;
 
 			//Use a single function to add numbers to the phone number you want to call
+
+			function callNumber(number) {
+
+				if (booleanCall == false) {
+					numberToCall += number;
+					document.getElementById("callNumber").innerHTML = "Calling: " + numberToCall;
+				}
+			}
 			//Use separate functions to start and end the call and to erase the number
+
+			function startCall() {
+				booleanCall = true;
+				document.getElementById("callNumber").innerHTML = "Calling: " + numberToCall;
+			}
+
+			function endCall() {
+				booleanCall = false;
+				numberToCall = "";
+				document.getElementById("callNumber").innerHTML = "Calling: ";
+			}
+
+			function eraseNumber() {
+				numberToCall = "";
+				document.getElementById("callNumber").innerHTML = "Calling: ";
+			}
 		</script>
 	</body>
 </html>
