@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // write a script that displays a multiplication table for a number entered by the user
+
+      //let number = parseInt(prompt("Enter a number"));
+
+      // for (let i = 1; i <= 10; i++) {
+      //      let result = number * i;
+      //     console.log(number + " * " + i + " = " + result);
+      //  }
+
+      //Now modify your script, so that the amount of calculations can also be specified by the user.
+
+        let number = parseInt(prompt("Enter a number"));
+
+        let amount = parseInt(prompt("Enter the amount of calculations"));
+
+        for (let i = 1; i <= amount; i++) {
+            let result = number * i;
+            console.log(number + " x " + i + " = " + result);
+        }
+    </script>
+  </body>
+</html>
