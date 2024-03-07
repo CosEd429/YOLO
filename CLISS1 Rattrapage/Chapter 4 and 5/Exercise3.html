@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2: Fine Checker</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="FineImages" src="Pictures/no_fine.png"> 
+    <p id="speedchecker">  </p> <!--The messages should be displayed in this <p> tag-->
+
+    <script>
+        let drivingSpeed = parseFloat(prompt("Enter your speed: "));
+        let allowedSpeed = parseFloat(prompt("Enter the allowed speed: "));
+
+        if (drivingSpeed < 0) {
+            document.getElementById("speedchecker").innerHTML = "Error: Invalid input! Please try again!";
+            document.getElementById("FineImages").src = ""
+        } else if (drivingSpeed <allowedSpeed && drivingSpeed > 0 ){
+            alert("Your speed : " + drivingSpeed + " km/h" + "\n" + "Allowed speed : " + allowedSpeed + " km/h" + "\n" + "You are driving within the allowed limit");
+            document.getElementById("FineImages").src = "Pictures/no_fine.png";
+        }
+        else if (drivingSpeed > allowedSpeed && drivingSpeed <= allowedSpeed + 20) {
+            alert("Your speed : " + drivingSpeed + " km/h" + "\n" + "Allowed speed : " + allowedSpeed + " km/h" + "\n" + "You are driving a little too fast!");
+            document.getElementById("FineImages").src = "Pictures/50_fine.png";
+        }
+        else if (drivingSpeed > allowedSpeed + 20 && drivingSpeed <= allowedSpeed + 40) {
+            alert("Your speed : " + drivingSpeed + " km/h" + "\n" + "Allowed speed : " + allowedSpeed + " km/h" + "\n" + "You are driving too fast!");
+            document.getElementById("FineImages").src = "Pictures/145_fine.png";
+        }
+        else if (drivingSpeed > allowedSpeed + 40) {
+            alert("Your speed : " + drivingSpeed + " km/h" + "\n" + "Allowed speed : " + allowedSpeed + " km/h" + "\n" + "You are driving way too fast!");
+            document.getElementById("FineImages").src = "Pictures/Driving_License_Withdrawn.png";
+        }
+    </script>
+</body>
+
+
+</html>

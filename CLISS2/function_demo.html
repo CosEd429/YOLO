@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Demo</title>
+</head>
+<body>
+    <script>
+        let min = 0;
+        let max = 10;
+        let number1 = Math.floor(Math.random() * (max - min + 1) + min);
+        let number2 = Math.floor(Math.random() * (max - min + 1) + min);
+        let mathQ = number1 + "+" + number2;
+        let correctAnswer = number1 + number2;
+        let userAnswer = parseInt(prompt("What is " + mathQ1 + "?"));
+
+        if(userAnswer == correctAnswer) {
+            alert("Correct!");
+        }
+        else {
+            alert("Incorrect!");
+        }
+
+        min = 0;
+        max = 100;
+        number1 = Math.floor(Math.random() * (max - min + 1) + min);
+        number2 = Math.floor(Math.random() * (max - min + 1) + min);
+        mathQ = number1 + "+" + number2;
+        correctAnswer = number1 + number2;
+        userAnswer = parseInt(prompt("What is " + mathQ1 + "?"));
+
+        if(userAnswer == correctAnswer) {
+            alert("Correct!");
+        }
+        else {
+            alert("Incorrect!");
+        }
+
+        min = 0;
+        max = 1000;
+        number1 = Math.floor(Math.random() * (max - min + 1) + min);
+        number2 = Math.floor(Math.random() * (max - min + 1) + min);
+        mathQ = number1 + "+" + number2;
+        correctAnswer = number1 + number2;
+        userAnswer = parseInt(prompt("What is " + mathQ1 + "?"));
+
+        if(userAnswer == correctAnswer) {
+            alert("Correct!");
+        }
+        else {
+            alert("Incorrect!");
+        }
+    </script>
+</body>
+
+</html>
