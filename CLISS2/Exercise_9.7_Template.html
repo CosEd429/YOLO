@@ -10,7 +10,35 @@
     <p id="result"></p>
 
     <script>
+        let player1 = prompt("Player 1: Enter your choice (rock, paper, or scissors): ");
+        let player2 = prompt("Player 2: Enter your choice (rock, paper, or scissors): ");
 
+       
+    function RockPaperScissorsChecker(player1 , player2){
+        if (player1 === player2) {
+            document.getElementById("result").innerHTML = "It's a tie!";
+        } else if (player1 === "rock") {
+            if (player2 === "scissors") {
+                document.getElementById("result").innerHTML = "Player 1 wins!";
+            } else {
+                document.getElementById("result").innerHTML = "Player 2 wins!";
+            }
+        } else if (player1 === "scissors") {
+            if (player2 === "paper") {
+                document.getElementById("result").innerHTML = "Player 1 wins!";
+            } else {
+                document.getElementById("result").innerHTML = "Player 2 wins!";
+            }
+        } else if (player1 === "paper") {
+            if (player2 === "rock") {
+                document.getElementById("result").innerHTML = "Player 1 wins!";
+            } else {
+                document.getElementById("result").innerHTML = "Player 2 wins!";
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Invalid input! Please try again!";
+        }
+    }
     </script>
 </body>
 </html>
