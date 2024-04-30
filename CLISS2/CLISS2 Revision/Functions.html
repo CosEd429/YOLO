@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let weightinKG = parseFloat(prompt("Enter your weight in KG: "));
+
+      function convertToPounds(weightinKG) {
+        let weightinPounds = weightinKG * 2.20462;
+        return weightinPounds;
+      }
+
+      let sizeInCM = parseFloat(prompt("Enter your size in CM: "));
+
+      function converToInches(sizeInCm) {
+        let sizeInInches = sizeInCm * 0.393701;
+        return sizeInInches;
+      }
+
+      let heightInCM = parseFloat(prompt("Enter your height in CM:"));
+
+      function convertToUsSize(heightInCM) {
+        let heightInInches = converToInches(heightInCM);
+        let usSize = heightInInches / 2.54;
+        return "A height of " + heightInCM + "cm transforms into " + usSize;
+      }
+
+      // write a test function name testFunctions which calls each function with parameters of your choice and prints the outcome in the console
+
+        function testFunctions() {
+            console.log(convertToPounds(weightinKG));
+            console.log(converToInches(sizeInCM));
+            console.log(convertToUsSize(heightInCM));
+        }
+
+        testFunctions();
+        
+    </script>
+  </body>
+</html>
