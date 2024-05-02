@@ -13,36 +13,39 @@
     <img id="Fox" src="Fox.jpg" style="position:absolute; top:0px; left:100px;width:20%;" />
 
     <script>
-      // when you click on the button it should move the Fox up
+      // when you click on the button it should move the Fox up and make it so it cant leave the screen
       function foxMoveUp() {
         var fox = document.getElementById("Fox");
         var tmp = parseInt(fox.style.top);
         tmp = tmp - 30;
+        if (tmp < 0) {
+          tmp = 0;
+        }
         fox.style.top = tmp + "px";
       }
 
-      // when you click on the button it should move the Fox down
+      // when you click on the button it should move the Fox down and make it so it cant leave the screen
       function FoxMoveDown() {
-        // get the fox
         var fox = document.getElementById("Fox");
-        // get the Y coordinate of the fox
         var foxTop = parseInt(fox.style.top);
-        // increase it by 10
         foxTop = foxTop + 10;
-        // move the fox down
         fox.style.top = foxTop + "px";
       }
 
-      // when you click on the button it should move the Fox left
+      // when you click on the button it should move the Fox left and make it so it cant leave the screen
       function FoxMoveLeft() {
         var Fox = document.getElementById("Fox");
-        Fox.style.left = parseInt(Fox.style.left) - 30 + "px";
+        var foxLeft = parseInt(Fox.style.left);
+        foxLeft = foxLeft - 10;
+        Fox.style.left = foxLeft + "px";
       }
 
-      // when you click on the button it should move the Fox right
+      // when you click on the button it should move the Fox right and make it so it cant leave the screen
       function FoxMoveRight() {
         var Fox = document.getElementById("Fox");
-        Fox.style.left = parseInt(Fox.style.left) + 30 + "px";
+        var foxLeft = parseInt(Fox.style.left);
+        foxLeft = foxLeft + 10;
+        Fox.style.left = foxLeft + "px";
       }
 
       // when you click on the Fox it should go to the center of the page
