@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+</head>
+<body style="text-align: center;">
+    <h1>Rock, Paper, Scissor Game</h1>
+    <p>Make your choice:</p>
+    <img src="Pictures/Rock.png" id="rock" style="margin: 30px;" onclick="rockPapersScissorsChoice('rock')"   >
+    <img src="Pictures/Paper.png" id="paper" style="margin: 30px;" onclick="rockPapersScissorsChoice('paper')">
+    <img src="Pictures/Scissors.png" id="scissors" style="margin: 30px;" onclick="rockPapersScissorsChoice('scissors')">
+    <p id="output"></p>
+
+    <script>
+        //Use this function to generate a random computer choice
+        //It will return "rock", "paper" or "scissors"
+        function generateComputerChoice() 
+        {
+            let choices = ["rock", "paper", "scissors"];
+            let randomNumber = Math.floor(Math.random() * 3);
+            return choices[randomNumber];
+        }
+
+
+        function rockPapersScissorsChoice(choice){
+            let computerChoice = generateComputerChoice();
+
+            if ( choice =="rock" && computerChoice == "scissors" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". You win!"
+            }
+            else if (choice == "paper" && computerChoice == "rock"){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". You win!"
+            } 
+            else if (choice == "scissors" && computerChoice == "paper"){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". You win!"
+            }
+            else if ( choice =="rock" && computerChoice == "paper" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". Computer wins!"
+            }
+            else if ( choice =="scissors" && computerChoice == "rock" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". Computer wins!"
+            }
+            else if ( choice =="paper" && computerChoice == "scissors" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". Computer wins!"
+            }
+            else if ( choice =="paper" && computerChoice == "paper" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". It's a Draw!"
+            }
+            else if ( choice =="rock" && computerChoice == "rock" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". It's a Draw!"
+            }
+            else if ( choice =="scissors" && computerChoice == "scissors" ){
+                let decision = document.getElementById("output").innerHTML= "You chose " + choice + ". Computer chose " + computerChoice + ". It's a Draw!"
+            }
+        }
+
+
+    </script>
+</body>
+</html>
