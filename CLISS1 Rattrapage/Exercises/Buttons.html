@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clicking on a button</title>
+  </head>
+  <body>
+    <button onclick="foxMoveUp()">move up</button>
+    <button onclick="FoxMoveDown()">move down</button>
+    <button onclick="FoxMoveLeft()">move left</button>
+    <button onclick="FoxMoveRight()">move right</button>
+
+    <img id="Fox" src="Fox.jpg" style="position:absolute; top:0px; left:100px;width:20%;" />
+
+    <script>
+      // when you click on the button it should move the Fox up
+      function foxMoveUp() {
+        var fox = document.getElementById("Fox");
+        var tmp = parseInt(fox.style.top);
+        tmp = tmp - 30;
+        fox.style.top = tmp + "px";
+      }
+
+      // when you click on the button it should move the Fox down
+      function FoxMoveDown() {
+        // get the fox
+        var fox = document.getElementById("Fox");
+        // get the Y coordinate of the fox
+        var foxTop = parseInt(fox.style.top);
+        // increase it by 10
+        foxTop = foxTop + 10;
+        // move the fox down
+        fox.style.top = foxTop + "px";
+      }
+
+      // when you click on the button it should move the Fox left
+      function FoxMoveLeft() {
+        var Fox = document.getElementById("Fox");
+        Fox.style.left = parseInt(Fox.style.left) - 30 + "px";
+      }
+
+      // when you click on the button it should move the Fox right
+      function FoxMoveRight() {
+        var Fox = document.getElementById("Fox");
+        Fox.style.left = parseInt(Fox.style.left) + 30 + "px";
+      }
+
+      // when you click on the Fox it should go to the center of the page
+      var Fox = document.getElementById("Fox");
+      Fox.onclick = function () {
+        Fox.style.left = window.innerWidth / 2 - Fox.width / 2 + "px";
+        Fox.style.top = window.innerHeight / 2 - Fox.height / 2 + "px";
+      };
+    </script>
+  </body>
+</html>
