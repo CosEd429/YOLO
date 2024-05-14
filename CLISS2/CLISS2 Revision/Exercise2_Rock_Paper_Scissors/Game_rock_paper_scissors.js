@@ -6,9 +6,10 @@ function generateComputerChoice()
     let choices = ["rock", "paper", "scissors"];
     let randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
+
 }
 
-function chooseOption(choices)addEventListener("click");{
+function chooseOption(choices){
     let userChoice = choices;
     document.getElementById("userChoice").value = userChoice;
     displayChoice();
@@ -21,23 +22,23 @@ function displayChoice(){
     let computerChoice = generateComputerChoice();
 
     if (userChoice === "rock") {
-        document.getElementById("userImage").src = "images/rock.png";
+        document.getElementById("userImage").src = "rock.png";
     }
     else if (userChoice === "paper") {
-        document.getElementById("userImage").src = "images/paper.png";
+        document.getElementById("userImage").src = "paper.png";
     }
     else {
-        document.getElementById("userImage").src = "images/scissors.png";
+        document.getElementById("userImage").src = "scissors.png";
     }
 
     if( computerChoice === "rock") {
-        document.getElementById("computerImage").src = "images/rock.png";
+        document.getElementById("computerImage").src = "rock.png";
     }
     else if (computerChoice === "paper") {
-        document.getElementById("computerImage").src = "images/paper.png";
+        document.getElementById("computerImage").src = "paper.png";
     }
     else {
-        document.getElementById("computerImage").src = "images/scissors.png";
+        document.getElementById("computerImage").src = "scissors.png";
     }
 }
 
