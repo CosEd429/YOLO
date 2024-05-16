@@ -29,6 +29,9 @@
         var fox = document.getElementById("Fox");
         var foxTop = parseInt(fox.style.top);
         foxTop = foxTop + 10;
+        if (foxTop + fox.height> window.innerHeight){
+          foxTop = window.innerHeight-fox.height
+        }
         fox.style.top = foxTop + "px";
       }
 
@@ -37,6 +40,9 @@
         var Fox = document.getElementById("Fox");
         var foxLeft = parseInt(Fox.style.left);
         foxLeft = foxLeft - 10;
+        if(foxLeft < 0 ){
+          foxLeft= 0;
+        }
         Fox.style.left = foxLeft + "px";
       }
 
@@ -45,6 +51,9 @@
         var Fox = document.getElementById("Fox");
         var foxLeft = parseInt(Fox.style.left);
         foxLeft = foxLeft + 10;
+        if (foxLeft + Fox.width > window.innerWidth){
+          foxLeft= window.innerWidth - Fox.width;
+        }
         Fox.style.left = foxLeft + "px";
       }
 

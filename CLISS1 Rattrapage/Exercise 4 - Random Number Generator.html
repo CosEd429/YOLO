@@ -10,15 +10,23 @@
 
         // write a script that displays a random number in the range defined by the user
 
-        let number1 = parseInt(prompt("Enter the first number"));
-        let number2 = parseInt(prompt("Enter the second number"));
+        // let number1 = parseInt(prompt("Enter the first number"));
+        // let number2 = parseInt(prompt("Enter the second number"));
 
         //find out which is the bigger number and the smaller number
-        let min = Math.min(number1, number2);
-        let max = Math.max(number1, number2);
+        // let min = Math.min(number1, number2);
+        // let max = Math.max(number1, number2);
        
-        let random = Math.floor(Math.random() * (max - min + 1)) + min ;
-        alert("A random number between" + " " + min + " and" + " " + max + " is" + " " + random);
+        // let random = Math.floor(Math.random() * (max - min + 1)) + min ;
+        // alert("A random number between" + " " + min + " and" + " " + max + " is" + " " + random);
+
+        let result =""
+
+        for (let i = 0 ; i < 4 ; i++){
+            let n = Math.floor(Math.random() * (9 - 0 + 1 )) + 0
+            result = result + n;
+            console.log(result);
+        }
     </script>
 </body>
 </html>

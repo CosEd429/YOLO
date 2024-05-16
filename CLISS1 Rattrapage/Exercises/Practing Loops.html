@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Write a script that applies the following calculation to a number given by the user until the result is 1:
+        //if the number is even, divide it by 2
+        //if the number is odd, multiply it by 3 and add 1
+
+        let number = parseFloat(prompt("Enter a number to count down until 1"))
+
+        while (number != 1){
+           if (number % 2 == 0){
+               number = number / 2;
+           } else {
+               number = number * 3 + 1;
+           }
+           console.log(number)
+        }
+
+        //Write a HTML document with a script that allows the user to calculate the average of  X numbers. X is also provided by the user.
+
+        // let numbers = parseInt(prompt("Enter the number of values you want to calculate the average of"));
+        // let sum = 0;
+        // for (let i = 0; i < numbers; i++){
+        //    let value = parseFloat(prompt("Enter a value"));
+        //    sum += value;
+        // }
+        // let average = sum / numbers;
+        // console.log(average);
+
+
+        //Write a HTML document with a script that ask the use to enter a number from the interval [-10,10]
+        //The scripts must repeat to ask for a number until the user enters a correct value
+
+        // let number = parseFloat(prompt("Enter a number from the interval [-10,10]"));
+        // while (number < -10 || number > 10){
+        //     number = parseFloat(prompt("Enter a number from the interval [-10,10]"));
+        // }
+        // console.log(number);
+    </script>
+</body>
+</html>
