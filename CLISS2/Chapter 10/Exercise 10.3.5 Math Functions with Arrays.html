@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getSum(){
+        let value = parseFloat(prompt("Enter values for multiple math functions"))
+        let sum = 0
+        const numbers=[]
+        while(!isNaN(value)){
+            numbers.push(value)
+            value = parseFloat(prompt("Enter values for multiple math functions"))
+        }
+        console.log(numbers)
+        for(let i = 0; i < numbers.length; i++) {
+            sum += numbers[i]
+        }
+        return sum
+    }
+
+    function getAverage(){
+        let value = parseFloat(prompt("Enter values for multiple math functions"))
+        let sum = 0
+        let count = 0
+        const numbers=[]
+        while(!isNaN(value)){
+            numbers.push(value)
+            count++
+            sum += value
+            value = parseFloat(prompt("Enter values for multiple math functions"))
+        }
+        console.log(numbers)
+        return sum/count
+    }
+
+    function getMin(){
+        
+    }
+    </script>
+</body>
+</html>
