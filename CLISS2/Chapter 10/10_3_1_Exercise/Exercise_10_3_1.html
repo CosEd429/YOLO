@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8 />
+        <title>Arrays and selection lists </title>
+    </head>
+    <body>
+        <h2>PC component selector</h2>
+        <select id="ComponentsList">
+            <option value="">Choose a PC component</option>
+        </select>
+        <input type="button" value="Select" id="selectButton">
+        <br>
+        <image id="componentImage" src="ComponentsImages/PC.png" width="200" height="150"></image>
+        <script>
+            //Code here...
+            const pcComponents = ["Processor", "Motherboard", "Processor cooling", "RAM", "GPU", "Storage", "Case", "Chassis cooling", "PSU", "OS"];
+
+            let selectComponent = document.getElementById("ComponentsList");
+
+            for (let i = 0; i < pcComponents.length; i++) {
+                selectComponent.options[selectComponent.options.length]=new Option(pcComponents[i], pcComponents[i]);
+            }
+
+            document.getElementById("selectButton").addEventListener("click", function() {
+                let selectedComponent = selectComponent.value;
+                let componentImage = document.getElementById("componentImage");
+                componentImage.src = "ComponentsImages/" + selectedComponent + ".png";
+            }
+        </script>
+    </body>
+</html>
