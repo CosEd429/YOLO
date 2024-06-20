@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <style>
+            body {
+              background-image: url('Forest.jpeg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+        </style>
+        <img id="fox" src="Fox.png" style="position:absolute; top:8px; left:0px; width:20%;">
+        <script> 
+        let height = window.innerHeight;
+        fox.style.top=height-300+"px";   
+        document.getElementById("fox").addEventListener("click", run);
+        function run()
+        {
+            let start = Date.now(); // remember start time
+             setInterval(function() {
+                // how much time passed from the start?
+                let timePassed = Date.now() - start;
+                // shifts the image to the right
+                fox.style.left = parseInt(fox.style.left) + 10 + 'px';
+            }, 10); //the function is executed every 20 milliseconds (=50 times per second)
+        }
+        </script>
+    </body>
+</html>
+    
+    
+    
